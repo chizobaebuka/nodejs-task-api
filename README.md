@@ -38,3 +38,5 @@ It includes **user authentication, authorization, task CRUD operations**, and su
 ### **1️⃣ Create your env taking sample from the .env.sample**  
 ### **1️⃣ When you want to run the test ensure the NODE_ENV = test in your .env**  
 ### **1️⃣ To run the test, use command** - npm run test
+
+### To see the documentation, upon successfully starting the server, go to http://localhost:{port}/api-docs
