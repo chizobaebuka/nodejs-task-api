@@ -36,3 +36,6 @@ It includes **user authentication, authorization, task CRUD operations**, and su
 ### **1️⃣ Create your env taking sample from the .env.sample**  
 ### **1️⃣ Start the server** - npm run dev  
 ### **1️⃣ Create your env taking sample from the .env.sample**  
+
+######
+*** when you want to run the test set your NODE_ENV = test ***
