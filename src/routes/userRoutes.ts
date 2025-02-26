@@ -3,6 +3,13 @@ import { deleteUserById, getAllUsers, getUserById, login, register, updateUserBy
 
 const router = express.Router();
 
+/**
+   * @swagger
+   * tags:
+   *   name: Users
+   *   description: API endpoints to manage users 
+*/
+
 router.post("/signup", register);
 router.post("/login", login);
 router.get('/', getAllUsers)
