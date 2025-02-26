@@ -5,7 +5,6 @@ import { taskSchema, taskUpdateSchema } from "../utils/validator";
 export const createTask = async (req: Request, res: Response): Promise<void> => {
     try {
         const user = req.user?.id; 
-        console.log({ user });
         if (!user) {
             res.status(401).json({ message: "Unauthorized: User ID not found" });
             return;

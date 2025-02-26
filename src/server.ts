@@ -24,8 +24,11 @@ app.use(errorHandler);
 app.use("/api/users", userRoutes);
 app.use("/api/tasks", taskRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== "test") {
+    connectDB(); // ✅ Only connects to MongoDB in production/dev mode
+    const PORT = process.env.PORT ?? 4006;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
 
 export default app;
