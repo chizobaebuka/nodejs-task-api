@@ -39,4 +39,18 @@ It includes **user authentication, authorization, task CRUD operations**, and su
 ### **1️⃣ When you want to run the test ensure the NODE_ENV = test in your .env**  
 ### **1️⃣ To run the test, use command** - npm run test
 
-### To see the documentation, upon successfully starting the server, go to http://localhost:{port}/api-docs
+***baseUrl=http://localhost:{port}***
+### To see the swagger documentation, upon successfully starting the server, go to {{base_url}}/api-docs
+
+## 🛠 API ENDPOINTS
+**Signup (POST {{baseUrl}}/api/users/signup)** 
+**Login (POST {{baseUrl}}/api/users/login)**
+**Get All Users (GET {{baseUrl}}/api/users)**
+**Get User by ID (GET {{baseUrl}}/api/users/:id)**
+**Update User (PATCH {{baseUrl}}/api/users/:id)**
+**Delete User (DELETE {{baseUrl}}/api/users/:id)**
+**Create Task (POST {{baseUrl}}/api/tasks/add)**: Requires auth token. The body should have title, description, maybe a dueDate. Example provided.
+**Get All Tasks (GET {{baseUrl}}/api/tasks)**: Requires token in headers.
+**Get Task by ID (GET {{baseUrl}}/api/tasks/:id)**: Example ID and token. Requires token in headers
+**Update Task (PATCH {{baseUrl}}/api/tasks/:id)**: Partial updates, example body with title or status. Requires token in headers
+**Delete Task (DELETE {{baseUrl}}/api/tasks/:id)**: ID and token. Requires token in headers
